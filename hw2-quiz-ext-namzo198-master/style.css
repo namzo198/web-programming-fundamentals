@@ -1,0 +1,55 @@
+/* TODO(you): Write the CSS to finish the assignment! */
+:root {
+  --grid-size: 650px;
+  --margin-size: 10px;
+  --square-size: calc((var(--grid-size) / 3) - var(--margin-size));
+}
+
+@media (max-width:700px) {
+    article {
+      width:95%;
+    }
+    
+    article header div {
+        visibility: hidden;
+    }  
+    
+}
+
+@media (max-width:500px) {
+   
+.choice-grid [data-question-id *= "e"]  {
+        width: 49%;
+    }
+}
+
+.choice-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin-bottom: 20px; 
+}
+
+
+[data-question-id *= "e"] {
+    margin-bottom: 20px;
+    width: 32.5%;
+    background-color: #f4f4f4;
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    padding: 10px;   
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+}
+
+[data-question-id *= "e"] img {
+    height: var(--square-size);
+    width: var(--square-size);
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+}
